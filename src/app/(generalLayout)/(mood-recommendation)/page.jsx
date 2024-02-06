@@ -16,6 +16,7 @@ const page = () => {
     };
 
     useEffect(() => {
+        // committed
         console.log('data', users, posts)
     }, [users])
 
