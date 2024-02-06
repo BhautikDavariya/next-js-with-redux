@@ -1,0 +1,108 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-v1:0, 0%, 100%, 1;
+    --background-v2:0, 0%, 92.9%, 1;
+    --background-v3:0, 0%, 94.9%, 1;
+    --background-v4:0, 0%, 87.8%, 1;
+    --background-v5:0, 0%, 13.9%, 1;
+    --text-v1:0, 0%, 0%, 1;
+    --text-v2: 0, 0%, 0%, 0.5;
+    --border-v1: 0, 0%, 85%, 1;
+    --border-v2:0, 0%, 60%, 0.7;
+  }
+  .dark {
+    --background-v1: 0, 0%, 0%, 1;
+    --background-v2: 0, 0%, 7.1%, 1;  
+    --background-v3:0, 0%, 5.1%, 1;
+    --background-v4:0, 0%, 12.2%, 1;
+    --background-v5:0, 0%, 23.9%, 1;
+    --text-v1:0, 0%, 100%, 1;
+    --text-v2:0, 0%, 100%, 0.5;
+    --border-v1:0, 0%, 14.1%, 1;
+    --border-v2: 0, 0%, 20%, 0.7;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+*{
+  @apply box-border m-0 p-0
+}
+
+body{
+  @apply overflow-x-hidden w-full min-h-screen 
+}
+
+/* 
+@layer base{
+   a{
+     @apply text-theme text-sm hover:text-textV1 transition-all duration-300
+   }
+} */
+
+@layer components{
+    .container {
+       @apply max-w-full sm:max-w-[540px] md:max-w-[740px] lg:max-w-[940px] xl:max-w-[1140px] 2xl:max-w-[1300px]
+    }
+    
+}
+
+@layer utilities{
+   .section-gap{
+      @apply py-10 md:py-14 lg:py-20
+   }
+}
+
+.centerSwiper .swiper-wrapper .swiper-slide > div{
+    transform: scale(0.80);
+}
+.centerSwiper .swiper-wrapper .swiper-slide.swiper-slide-active > div{
+    transform: scale(1);
+}
+
+.centerSwiper .swiper-wrapper .swiper-slide.swiper-slide-prev > div{
+   margin-left: -8px;
+}
+.centerSwiper .swiper-wrapper .swiper-slide.swiper-slide-next > div{
+  margin-left: 8px;
+}
+
+.centerSwiper .swiper-wrapper .swiper-slide .emoji-wrapper{
+   /* border-top: none !important;
+   border-bottom: none !important; */
+}
+.centerSwiper .swiper-wrapper .swiper-slide:first-child .emoji-wrapper {
+    background: linear-gradient(318.96deg, rgba(0, 0, 0, 0.4) -1.9%, rgba(36, 36, 36, 0.4) 105%), rgba(209, 167, 48, 0.25);
+    border: 2px solid #D1A730;
+}
+.centerSwiper .swiper-wrapper .swiper-slide:nth-child(2) .emoji-wrapper {
+    background: linear-gradient(318.96deg, rgba(0, 0, 0, 0.4) -1.9%, rgba(36, 36, 36, 0.4) 105%), rgba(52, 255, 247, 0.25);
+    border: 2px solid #2F7A38;
+}
+.centerSwiper .swiper-wrapper .swiper-slide:nth-child(3) .emoji-wrapper {
+    background: linear-gradient(318.96deg, rgba(0, 0, 0, 0.4) -1.9%, rgba(36, 36, 36, 0.4) 105%), rgba(52, 255, 247, 0.25);
+    border: 1px solid #34FFF7
+}
+.centerSwiper .swiper-wrapper .swiper-slide:nth-child(4) .emoji-wrapper {
+    background:linear-gradient(318.96deg, rgba(0, 0, 0, 0.4) -1.9%, rgba(36, 36, 36, 0.4) 105%), rgba(215, 96, 255, 0.25);
+    border: 1px solid #D760FF;
+}
+.centerSwiper .swiper-wrapper .swiper-slide:nth-child(5) .emoji-wrapper {
+    background: linear-gradient(318.96deg, rgba(0, 0, 0, 0.4) -1.9%, rgba(36, 36, 36, 0.4) 105%), rgba(255, 64, 64, 0.25);
+    border: 1px solid #FF4040;
+}
